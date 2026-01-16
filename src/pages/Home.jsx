@@ -5,6 +5,7 @@ import CardSec from '../Components/CardSec/CardSec'
 import Subscribtion from '../Components/Subscribtion/Subscribtion'
 import MobileIdCard from '../Components/MobileIdCard/MobileIdCard'
 import AppsCard from '../Components/AppsCard/AppIcon'
+import Catalog from '../Components/Catalog/Catalog'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Subscribtion/>
         <MobileIdCard/>
         <AppsCard/>
+        <Catalog/>
     </>
   )
 }

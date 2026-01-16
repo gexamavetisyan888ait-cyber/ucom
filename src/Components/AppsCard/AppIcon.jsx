@@ -3,7 +3,7 @@ import "./AppIcon.css";
 
 export default function App() {
   return (
-    <div className="page">
+    <div className="page2">
       <div className="card">
         <h2>Recharge your account online</h2>
         <p className="subtitle">

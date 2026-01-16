@@ -1,10 +1,4 @@
-body {
-  margin: 0;
-  background: #f7f7f7;
-  font-family: Inter, Arial, sans-serif;
-}
-
-.page {
+.page2 {
   display: flex;
   gap: 24px;
   padding: 40px;
