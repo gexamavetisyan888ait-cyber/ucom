@@ -4,6 +4,7 @@ import CardFirst from '../Components/cardFirst/CardFirst'
 import CardSec from '../Components/CardSec/CardSec'
 import Subscribtion from '../Components/Subscribtion/Subscribtion'
 import MobileIdCard from '../Components/MobileIdCard/MobileIdCard'
+import AppsCard from '../Components/AppsCard/AppIcon'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <CardSec/>
         <Subscribtion/>
         <MobileIdCard/>
+        <AppsCard/>
     </>
   )
 }
