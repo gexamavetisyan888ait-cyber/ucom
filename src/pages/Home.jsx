@@ -7,6 +7,7 @@ import MobileIdCard from '../Components/MobileIdCard/MobileIdCard'
 import AppsCard from '../Components/AppsCard/AppIcon'
 import Catalog from '../Components/Catalog/Catalog'
 import News from "../Components/News/News";
+impor
 
 export default function Home() {
   return (
