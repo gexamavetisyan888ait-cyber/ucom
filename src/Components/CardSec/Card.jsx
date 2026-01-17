@@ -18,42 +18,42 @@ export default function Card({
       <div className="cardInfo">
         {internet ? (
           <p>
-            <i class="fa-solid fa-globe"></i> {internet}
+            <i className="fa-solid fa-globe"></i> {internet}
           </p>
         ) : (
           ""
         )}
         {rope ? (
           <p>
-            <i class="fa-solid fa-phone-volume"></i> {rope}
+            <i className="fa-solid fa-phone-volume"></i> {rope}
           </p>
         ) : (
           ""
         )}
         {sms ? (
           <p>
-            <i class="fa-regular fa-comment-dots"></i> {sms}
+            <i className="fa-regular fa-comment-dots"></i> {sms}
           </p>
         ) : (
           ""
         )}
         {TVbox ? (
           <p>
-            <i class="fa-solid fa-tag"></i> {TVbox}
+            <i className="fa-solid fa-tag"></i> {TVbox}
           </p>
         ) : (
           ""
         )}
         {tv ? (
           <p>
-            <i class="fa-solid fa-tv"></i> {tv}
+            <i className="fa-solid fa-tv"></i> {tv}
           </p>
         ) : (
           ""
         )}
         {rouming ? (
           <p>
-            <i class="fa-solid fa-signal"></i>
+            <i className="fa-solid fa-signal"></i>
             {rouming}
           </p>
         ) : (
@@ -61,7 +61,7 @@ export default function Card({
         )}
         {taninternet ? (
           <p>
-            <i class="fa-solid fa-house"></i>
+            <i className="fa-solid fa-house"></i>
             {taninternet}
           </p>
         ) : (
