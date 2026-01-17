@@ -26,14 +26,14 @@ export default function Header() {
         </div>
 
         <div className="main-bar">
-          <div className="logo">
+          <a href="/" className="logo">
             <img src="https://www.ucom.am/images/main_logo.svg" alt="Ucom" />
-          </div>
+          </a>
 
           <nav className="nav">
             <a href="#">Տան համար ▾</a>
             <a href="#">Շարժական կապ ▾</a>
-            <a href="#">Ռոումինգ</a>
+            <a href="/rouming">Ռոումինգ</a>
             <a href="#">
               5G ցանց <span className="badge">նոր</span>
             </a>

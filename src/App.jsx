@@ -1,14 +1,17 @@
 import "./App.css";
-import Header from "./Components/Header/Header";
 import Home from "./pages/Home";
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Rouming from "./pages/Rouming";
 
 
 function App() {
   return (
-    <>
-      <Header />
-      <Home />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/rouming" element={<Rouming />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
