@@ -45,7 +45,7 @@ export default function RoumingFirst() {
               </div>
             </div>
             <button className="search-btn">
-              <span className="search-icon">🔍</span> Որոնել
+              <span className="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span> Որոնել
             </button>
           </div>
         </div>
