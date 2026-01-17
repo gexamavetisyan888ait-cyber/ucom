@@ -7,7 +7,7 @@ import MobileIdCard from '../Components/MobileIdCard/MobileIdCard'
 import AppsCard from '../Components/AppsCard/AppIcon'
 import Catalog from '../Components/Catalog/Catalog'
 import News from "../Components/News/News";
-impor
+import Footer from '../Components/Footer/Footer'
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
         <AppsCard/>
         <Catalog/>
         <News/>
-
+        <Footer/>
     </>
   )
 }

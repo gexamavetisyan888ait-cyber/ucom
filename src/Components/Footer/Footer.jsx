@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="ucom-footer">
       <div className="footer-top">
-        {/* Contact Support Section */}
+
         <div className="footer-column contact-card">
           <h4>Զանգերի սպասարկում 24/7</h4>
           <div className="contact-item">
@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Company Links */}
+
         <div className="footer-column">
           <h4>Ucom ընկերություն</h4>
           <ul>
@@ -43,7 +43,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Help Links */}
+
         <div className="footer-column">
           <h4>Օգնություն</h4>
           <ul>
@@ -53,7 +53,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Information Links */}
+
         <div className="footer-column">
           <h4>Տեղեկատվություն</h4>
           <ul>
@@ -68,7 +68,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* App & Socials */}
+
         <div className="footer-column app-section">
           <div className="app-header">
             <div className="u-logo">U!</div>
