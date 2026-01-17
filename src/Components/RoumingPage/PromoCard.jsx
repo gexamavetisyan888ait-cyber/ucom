@@ -1,12 +1,12 @@
-export default function ({ title, img }) {
+export default function ({ title, descripton, img }) {
   return (
-    <div className="promo-card">
-      <div className="promo-text">
+    <div className="promo-card1">
+      <div className="promo-text1">
         <h3>{title}</h3>
-        <p>Ճանապարհին ուր էլ որ տանի, Ucom-ի հետ միշտ կապի մեջ եք:</p>
-        <button className="btn-outline">Մանրամասն</button>
+        <p>{descripton}</p>
+        <button className="btn-outline1">Մանրամասն</button>
       </div>
-      <img src={img} alt={title} className="promo-img" />
+      <img src={img} alt={title} className="promo-img1" />
     </div>
   );
 }
