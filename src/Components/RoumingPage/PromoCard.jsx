@@ -1,12 +1,32 @@
-export default function ({ title, descripton, img }) {
+import React from "react";
+import PromoCard from "./PromoCard";
+
+const RoamingPage = () => {
   return (
-    <div className="promo-card1">
-      <div className="promo-text1">
-        <h3>{title}</h3>
-        <p>{descripton}</p>
-        <button className="btn-outline1">Մանրամասն</button>
-      </div>
-      <img src={img} alt={title} className="promo-img1" />
+    <div className="mt-[50px] bg-white font-sans text-[#333]">
+      <section className="px-[10%] pb-[60px]">
+        <div className="grid grid-cols-1 gap-[30px] md:grid-cols-2">
+          <PromoCard
+            title="uTravel ինտերնետ փաթեթ"
+            descripton="Ճանապարհն ուր էլ որ տանի, Ucom-ի հետ միշտ կապի մեջ եք։ Վրաստան, ԱՄԷ, Եգիպտոս, Իտալիա, Իսպանիա, Ավստրիա և մի շարք հայտնի ուղղություններ մեկնելիս ակտիվացրեք uTravel մատչելի ռոումինգ ինտերնետ փաթեթներից մեկը։"
+            img="https://www.ucom.am/storage/files/banner-5-2-1-290x_-quality(75)-webp(80).png?token=826d56d1aa478de7ce5141d4095573df"
+          />
+
+          <PromoCard
+            title="Ինտերնետ ռոումինգում"
+            descripton="Եթե ցանկանում եք անընդմեջ կիսվել Ձեր հանգստի գեղեցիկ դրվագներով, ակտիվացրե՛ք Ինտերնետ ռոումինգում փաթեթներից որևէ մեկը։"
+            img="https://www.ucom.am/storage/files/banner-3-2-2-290x_-quality(75)-webp(80).png?token=ed379152fa2e7a1ac7a08ed7b4f38287"
+          />
+
+          <PromoCard
+            title="Չաթ ռոումինգում"
+            descripton="Եգիպտոս, Վրաստան, Հունաստան, ԱՄԷ, Կիպրոս, Իտալիա, Իսպանիա կամ նշված այլ ծովափնյա երկիր մեկնելիս մնացե՛ք կապի մեջ։"
+            img="https://www.ucom.am/storage/files/banner-4-1-1-290x_-quality(75)-webp(80).png?token=f581f79c09b3c3fa46dfbf537b2386ce"
+          />
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default RoamingPage;
