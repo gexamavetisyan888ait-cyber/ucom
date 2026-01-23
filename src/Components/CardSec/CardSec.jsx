@@ -30,39 +30,34 @@ export default function CardSec() {
     },
     {
       name: "Unity 12500",
-      internet: "Super Wi-Fi սարք",
+      internet: "Անսահմանափակ ինտերնետ",
       taninternet: "400 Մբ/վ տան ինտերնետ",
       tv: "200 հեռուստաալիք",
       TVbox: "Անվճար Premium WiFi Plus սարք, Smart TV box",
-      internet: "Անսահմանափակ ինտերնետ",
       gin: "5 000 ֏",
       rope: "3000 րոպե",
     },
   ];
 
   return (
-    <>
-      <h1 style={{
-        marginTop:"50px"
-      }}>Լավագույն առաջարկ</h1>
-      <div className="yndhannurDiv">
-        {db.map((el, i) => {
-          return (
-            <Card
-              key={i}
-              name={el.name}
-              internet={el.internet}
-              rope={el.rope}
-              TVbox={el.TVbox}
-              tv={el.tv}
-              rouming={el.rouming}
-              gin={el.gin}
-              taninternet={el.taninternet}
-              sms={el.sms}
-            />
-          );
-        })}
+    <div className="max-w-[1200px] mx-auto mt-12 px-5">
+      <h1 className="text-2xl font-bold mb-8 text-center">Լավագույն առաջարկ</h1>
+      <div className="flex mb-5 justify-center gap-6">
+        {db.map((el, i) => (
+          <Card
+            key={i}
+            name={el.name}
+            internet={el.internet}
+            rope={el.rope}
+            TVbox={el.TVbox}
+            tv={el.tv}
+            rouming={el.rouming}
+            gin={el.gin}
+            taninternet={el.taninternet}
+            sms={el.sms}
+          />
+        ))}
       </div>
-    </>
+    </div>
   );
 }

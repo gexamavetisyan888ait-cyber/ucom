@@ -1,6 +1,5 @@
 import React from "react";
 import PromoCard from "./PromoCard";
-import "./RoamingPage.css";
 
 const RoamingPage = () => {
   return (
