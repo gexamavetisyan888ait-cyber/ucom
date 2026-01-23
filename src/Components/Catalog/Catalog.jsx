@@ -1,11 +1,8 @@
-import "./Catalog.css";
-import InfoCard from './Card'
-
-
+import InfoCard from "./Card";
 
 export default function Catalog() {
   return (
-    <div className="wrapper">
+    <div className="flex items-center justify-center gap-6 p-10 bg-white font-sans">
       <InfoCard
         title="For the family"
         subtitle="Home Internet, Mobile Services and TV"

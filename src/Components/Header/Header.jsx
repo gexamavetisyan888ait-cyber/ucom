@@ -1,9 +1,7 @@
 export default function Header() {
   return (
     <header className="w-full border-b border-gray-200 font-sans">
-      {/* Top bar */}
       <div className="flex justify-between px-10 py-2 text-sm border-b border-gray-200">
-        {/* Left */}
         <div className="flex gap-5">
           <a
             href="#"
@@ -16,7 +14,6 @@ export default function Header() {
           </a>
         </div>
 
-        {/* Right */}
         <div className="flex items-center gap-5">
           <span className="font-medium">
             <i className="fa-solid fa-phone mr-1"></i> 444 | 011 444 444
@@ -32,9 +29,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Main bar */}
       <div className="flex items-center justify-between px-10 py-4">
-        {/* Logo */}
         <a href="/" className="block">
           <img
             src="https://www.ucom.am/images/main_logo.svg"
@@ -43,7 +38,6 @@ export default function Header() {
           />
         </a>
 
-        {/* Navigation */}
         <nav className="flex gap-8">
           <a href="#" className="font-medium text-black hover:text-green-500">
             Տան համար ▾
@@ -68,7 +62,6 @@ export default function Header() {
           </a>
         </nav>
 
-        {/* Actions */}
         <div className="flex items-center gap-5">
           <span className="cursor-pointer text-lg">
             <i className="fa-solid fa-magnifying-glass"></i>
