@@ -1,60 +1,87 @@
-import "./Header.css";
-
 export default function Header() {
   return (
-    <>
-      <header className="ucom-header">
-        <div className="top-bar">
-          <div className="top-left">
-            <a href="#">Անհատներ</a>
-            <a href="#">Բիզնես</a>
-          </div>
-
-          <div className="top-right">
-            <span className="phone">
-              <i className="fa-solid fa-phone"></i> 444 | 011 444 444
-            </span>
-            <a href="#">
-              {" "}
-              <i className="fa-solid fa-question"></i> Օգնություն
-            </a>
-            <div className="lang">
-              {" "}
-              <i className="fa-solid fa-globe"></i> Հայ ▾
-            </div>
-          </div>
+    <header className="w-full border-b border-gray-200 font-sans">
+      {/* Top bar */}
+      <div className="flex justify-between px-10 py-2 text-sm border-b border-gray-200">
+        {/* Left */}
+        <div className="flex gap-5">
+          <a
+            href="#"
+            className="relative font-medium text-black after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:bg-green-500"
+          >
+            Անհատներ
+          </a>
+          <a href="#" className="font-medium text-black">
+            Բիզնես
+          </a>
         </div>
 
-        <div className="main-bar">
-          <a href="/" className="logo">
-            <img src="https://www.ucom.am/images/main_logo.svg" alt="Ucom" />
+        {/* Right */}
+        <div className="flex items-center gap-5">
+          <span className="font-medium">
+            <i className="fa-solid fa-phone mr-1"></i> 444 | 011 444 444
+          </span>
+
+          <a href="#" className="text-black">
+            <i className="fa-solid fa-question mr-1"></i> Օգնություն
           </a>
 
-          <nav className="nav">
-            <a href="#">Տան համար ▾</a>
-            <a href="#">Շարժական կապ ▾</a>
-            <a href="/rouming">Ռոումինգ</a>
-            <a href="#">
-              5G ցանց <span className="badge">նոր</span>
-            </a>
-            <a href="#">
-              Uplay <span className="badge">նոր</span>
-            </a>
-          </nav>
-
-          <div className="actions">
-            <span className="icon">
-              <i className="fa-solid fa-magnifying-glass"></i>
-            </span>
-            <span className="icon">
-              <i className="fa-solid fa-cart-shopping"></i>
-            </span>
-            <button className="pay-btn">
-              <i className="fa-solid fa-wallet"></i> Վճարել
-            </button>
+          <div className="cursor-pointer">
+            <i className="fa-solid fa-globe mr-1"></i> Հայ ▾
           </div>
         </div>
-      </header>
-    </>
+      </div>
+
+      {/* Main bar */}
+      <div className="flex items-center justify-between px-10 py-4">
+        {/* Logo */}
+        <a href="/" className="block">
+          <img
+            src="https://www.ucom.am/images/main_logo.svg"
+            alt="Ucom"
+            className="h-9"
+          />
+        </a>
+
+        {/* Navigation */}
+        <nav className="flex gap-8">
+          <a href="#" className="font-medium text-black hover:text-green-500">
+            Տան համար ▾
+          </a>
+          <a href="#" className="font-medium text-black hover:text-green-500">
+            Շարժական կապ ▾
+          </a>
+          <a href="/rouming" className="font-medium text-black hover:text-green-500">
+            Ռոումինգ
+          </a>
+          <a href="#" className="font-medium text-black hover:text-green-500">
+            5G ցանց
+            <span className="ml-1 rounded-md bg-green-500 px-1.5 py-0.5 text-[11px] text-white">
+              նոր
+            </span>
+          </a>
+          <a href="#" className="font-medium text-black hover:text-green-500">
+            Uplay
+            <span className="ml-1 rounded-md bg-green-500 px-1.5 py-0.5 text-[11px] text-white">
+              նոր
+            </span>
+          </a>
+        </nav>
+
+        {/* Actions */}
+        <div className="flex items-center gap-5">
+          <span className="cursor-pointer text-lg">
+            <i className="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <span className="cursor-pointer text-lg">
+            <i className="fa-solid fa-cart-shopping"></i>
+          </span>
+
+          <button className="flex items-center gap-2 rounded-xl bg-green-100 px-4 py-2 font-semibold hover:bg-green-200">
+            <i className="fa-solid fa-wallet"></i> Վճարել
+          </button>
+        </div>
+      </div>
+    </header>
   );
 }
