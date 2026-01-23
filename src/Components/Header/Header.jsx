@@ -39,7 +39,7 @@ export default function Header() {
         </a>
 
         <nav className="flex gap-8">
-          <a href="#" className="font-medium text-black hover:text-green-500">
+          <a href="/forHome" className="font-medium text-black hover:text-green-500">
             Տան համար ▾
           </a>
           <a href="#" className="font-medium text-black hover:text-green-500">
