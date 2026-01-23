@@ -3,9 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-[#f8f8f8] px-[10%] py-10 text-[13px] text-[#333] font-sans">
-      {/* Top */}
       <div className="flex flex-wrap justify-between gap-5 border-b border-gray-300 pb-10">
-        {/* Contact card */}
         <div className="max-w-[250px] flex-1 rounded-xl bg-white p-5 shadow-[0_2px_10px_rgba(0,0,0,0.05)]">
           <h4 className="mb-3 text-xs font-medium text-gray-500">
             Զանգերի սպասարկում 24/7
@@ -52,7 +50,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Column */}
         <div className="min-w-[150px] flex-1">
           <h4 className="mb-4 text-xs font-medium text-gray-500">
             Ucom ընկերություն
@@ -121,7 +118,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* App section */}
         <div className="min-w-[200px] flex-1">
           <div className="mb-4 flex items-center gap-2.5">
             <div className="rounded-lg bg-[#6fb327] px-3 py-2 text-lg font-bold text-white">
@@ -156,7 +152,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom */}
       <div className="flex flex-col items-center justify-between gap-3 pt-5 text-xs text-gray-500 md:flex-row">
         <div>
           <span className="font-bold text-black">U!</span> © Հեղինակային իրավունք
