@@ -19,7 +19,7 @@ export default function Header() {
             <i className="fa-solid fa-phone mr-1"></i> 444 | 011 444 444
           </span>
 
-          <a href="#" className="text-black">
+          <a href="/help" className="text-black">
             <i className="fa-solid fa-question mr-1"></i> Օգնություն
           </a>
 
