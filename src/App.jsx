@@ -1,12 +1,10 @@
 import "./App.css";
 import Home from "./pages/Home";
 import ForHome from "./pages/ForHome";
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Rouming from "./pages/Rouming";
-import Help from "./pages/Help"
-import MobileConection from "./Components/MobileConection/MobileConection";
-
-
+import Help from "./pages/Help";
+import MobileConection from './pages/MobileConectionn'
 function App() {
   return (
     <BrowserRouter>
@@ -14,8 +12,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/rouming" element={<Rouming />} />
         <Route path="/forHome" element={<ForHome />} />
-        <Route path="/help" element={<Help/>} />
-              <Route path="/mobileconection" element={<MobileConection/>} />
+        <Route path="/help" element={<Help />} />
+        <Route path="/mobileconection" element={<MobileConection />} />
       </Routes>
     </BrowserRouter>
   );
