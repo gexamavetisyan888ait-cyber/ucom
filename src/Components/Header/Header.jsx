@@ -42,7 +42,7 @@ export default function Header() {
           <a href="/forHome" className="font-medium text-black hover:text-green-500">
             Տան համար ▾
           </a>
-          <a href="#" className="font-medium text-black hover:text-green-500">
+          <a href="/mobileconection" className="font-medium text-black hover:text-green-500">
             Շարժական կապ ▾
           </a>
           <a href="/rouming" className="font-medium text-black hover:text-green-500">
