@@ -1,10 +1,11 @@
 import React from "react";
-import Card from "./PromoCard"
+import Card from "./Card";
 
 export default function RoamingBundlesSection() {
   return (
-    <section className="bg-gray-50 py-16 px-4">
+    <section className="bg-gray-50 py-12 sm:py-16 px-4 sm:px-6 lg:px-10">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        
         <Card
           title="uTravel ինտերնետ փաթեթ"
           description="Ճանապարհն ուր էլ որ տանի, Ucom-ի հետ միշտ կապի մեջ եք։ Վրաստան, ԱՄԷ, Եգիպտոս, Իտալիա, Իսպանիա, Ավստրիա և մի շարք հայտնի ուղղություններ մեկնելիս ակտիվացրեք uTravel մատչելի ռոումինգ ինտերնետ փաթեթներից մեկը։"
@@ -15,6 +16,7 @@ export default function RoamingBundlesSection() {
           title="Ինտերնետ ռոումինգում փաթեթներ"
           description="Եթե ցանկանում եք անընդմեջ կիսվել Ձեր հանգստի գեղեցիկ դրվագներով, ակտիվացրե՛ք Ինտերնետ ռոումինգում փաթեթներից որևէ մեկը։"
           image="https://www.ucom.am/storage/files/banner-3-2-2-580x_-quality(75)-webp(80).png?token=31bbab9a07159152e599a281440c2fec"
+          align="left"
         />
 
         <div className="md:col-span-2">
