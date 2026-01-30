@@ -2,7 +2,13 @@ import InfoCard from "./Card";
 
 export default function Catalog() {
   return (
-    <div className="flex items-center justify-center gap-6 p-10 bg-white font-sans">
+    <div
+      className="
+        flex flex-col items-center gap-6
+        p-5 sm:p-10 bg-white font-sans
+        md:flex-row md:justify-center
+      "
+    >
       <InfoCard
         title="For the family"
         subtitle="Home Internet, Mobile Services and TV"
