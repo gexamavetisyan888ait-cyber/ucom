@@ -41,21 +41,20 @@ export default function CardSec() {
 
   return (
     <div className="max-w-[1200px] mx-auto mt-12 px-5">
-      <h1 className="text-2xl font-bold mb-8 text-center">Լավագույն առաջարկ</h1>
-      <div className="flex mb-5 justify-center gap-6">
+      <h1 className="text-2xl font-bold mb-8 text-center">
+        Լավագույն առաջարկ
+      </h1>
+
+      <div
+        className="
+          grid gap-6 justify-items-center
+          grid-cols-1
+          sm:grid-cols-2
+          lg:grid-cols-4
+        "
+      >
         {db.map((el, i) => (
-          <Card
-            key={i}
-            name={el.name}
-            internet={el.internet}
-            rope={el.rope}
-            TVbox={el.TVbox}
-            tv={el.tv}
-            rouming={el.rouming}
-            gin={el.gin}
-            taninternet={el.taninternet}
-            sms={el.sms}
-          />
+          <Card key={i} {...el} />
         ))}
       </div>
     </div>

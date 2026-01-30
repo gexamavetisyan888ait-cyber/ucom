@@ -12,12 +12,18 @@ export default function Card({
   taninternet,
 }) {
   return (
-    <div className="flex flex-col justify-between gap-5 w-[275px] h-[400px] border border-gray-300 rounded-2xl">
+    <div
+      className="
+        flex flex-col justify-between gap-5
+        w-full max-w-[275px] h-[400px]
+        border border-gray-300 rounded-2xl
+      "
+    >
       <div className="h-12 w-full bg-green-600 rounded-t-2xl flex items-center justify-center text-white font-bold">
         {name}
       </div>
 
-      <div className="flex flex-col gap-4 p-2">
+      <div className="flex flex-col gap-4 p-3 text-sm">
         {internet && (
           <p>
             <i className="fa-solid fa-globe text-green-600 mr-2"></i>
