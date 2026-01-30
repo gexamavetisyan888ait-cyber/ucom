@@ -30,19 +30,19 @@ const newsData = [
 
 const NewsSection = () => {
   return (
-    <section className="px-[60px] py-[60px] font-sans max-md:px-[30px]">
-      <div className="mb-[30px] flex items-center justify-between">
-        <h2 className="text-[32px] font-bold">Նորություններ</h2>
+    <section className="px-6 md:px-10 lg:px-16 py-12 font-sans">
+      <div className="mb-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Նորություններ</h2>
 
         <a
           href="#"
-          className="font-semibold text-green-700 hover:underline"
+          className="font-semibold text-green-700 hover:underline text-sm sm:text-base"
         >
           Տեսնել բոլորը →
         </a>
       </div>
 
-      <div className="grid grid-cols-3 gap-6 max-[900px]:grid-cols-1">
+      <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {newsData.map((item) => (
           <NewsCard key={item.id} {...item} />
         ))}
