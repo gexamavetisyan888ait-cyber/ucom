@@ -15,7 +15,7 @@ export default function Card({
     <div
       className="
         flex flex-col justify-between gap-5
-        w-full max-w-[275px] h-[400px]
+        w-full h-[400px]
         border border-gray-300 rounded-2xl
       "
     >

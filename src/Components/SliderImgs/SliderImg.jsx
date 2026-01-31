@@ -21,7 +21,7 @@ export default function ImageSlider() {
       navigation
       pagination={{ clickable: true }}
       loop
-      className="mySwiper max-w-6xl mx-auto"
+      className="mySwiper  mx-auto"
     >
       {images.map((img, index) => (
         <SwiperSlide key={index}>
