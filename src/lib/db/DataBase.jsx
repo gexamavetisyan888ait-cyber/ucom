@@ -1,4 +1,4 @@
-export default objCardSec = {
+export default db= {
   CardSecDB: [
     {
       name: "Level Up+ 3000",
