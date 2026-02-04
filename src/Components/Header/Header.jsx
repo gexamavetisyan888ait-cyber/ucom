@@ -4,7 +4,6 @@ export default function Header() {
   return (
     <header className="w-full border-b border-gray-200 font-sans">
       
-      {/* Top info bar */}
       <div className="hidden sm:flex justify-between px-4 sm:px-6 lg:px-10 py-2 text-xs sm:text-sm border-b border-gray-200">
         <div className="flex gap-4 sm:gap-5">
           <a
@@ -33,9 +32,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Main nav */}
       <div className="flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 lg:px-10 py-3 sm:py-4 gap-4 sm:gap-0">
-        {/* Logo */}
         <a href="/" className="block">
           <img
             src="https://www.ucom.am/images/main_logo.svg"
@@ -44,7 +41,6 @@ export default function Header() {
           />
         </a>
 
-        {/* Navigation links */}
         <nav className="flex flex-col sm:flex-row gap-3 sm:gap-8 text-sm sm:text-base items-center w-full sm:w-auto">
           <a
             href="/forHome"
@@ -84,7 +80,6 @@ export default function Header() {
           </a>
         </nav>
 
-        {/* Right actions */}
         <div className="flex items-center gap-3 sm:gap-5">
           <span className="cursor-pointer text-lg">
             <i className="fa-solid fa-magnifying-glass"></i>
