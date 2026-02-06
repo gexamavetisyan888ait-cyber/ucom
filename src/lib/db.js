@@ -1,4 +1,4 @@
-export const db= {
+export const db = {
   CardSecDB: [
     {
       name: "Level Up+ 3000",
@@ -109,56 +109,46 @@ export const db= {
       id: 1,
       text: "Ներբեռնելով",
       linkText: "Ucom հավելվածը",
-      
-    
     },
     {
       id: 2,
       text: "Օգտվելով կայքի առցանց օգնության ծառայությունից",
       linkText: "",
-      
     },
     {
       id: 3,
       text: "Գրելով մեր",
       linkText: "Facebook կամ Instagram էջերին",
-      
     },
     {
       id: 4,
       text: "Ուղարկելով էլեկտրոնային նամակ՝ 444@ucom.am հասցեին Ucom ծառայությունների պայմանների և սպասարկման վերաբերյալ, ",
       linkText:
         "info@ucom.am հասցեին գլխամասային գրասենյակ ներկայացման ենթակա բոլոր հարցերով",
-      
     },
     {
       id: 5,
       linkText:
         "Զանգահարելով 444՝ Ձեր Ucom բջջային համարից կամ 011 444 444՝ ցանկացած այլ համարից",
-      
     },
     {
       id: 6,
       text: "Գրելով մեր",
       linkText: "Այցելելով Ucom-ի սպասարկման և վաճառքի ցանկացած կենտրոն",
-      
     },
     {
       id: 7,
       text: "Գլխամասային գրասենյակ",
       linkText:
         "<<Յուքոմ>> ՓԲԸ ՀՀ, Երևան 0069,Դավիթ Անհաղթի 8/4 Հեռ.` +374 11 400 400 Ֆաքս` +374 11 400 401 էլ. փոստ` info@ucom.am ",
-      
     },
     {
       id: 8,
       linkText: "Անհրաժեշտ փաստաթղթեր",
-      
     },
     {
       id: 9,
       linkText: "Օգտակար համարներ",
-      
     },
   ],
   InternetInfoDB: [
@@ -221,10 +211,32 @@ export const db= {
       buttonText: "Ավելին",
     },
   ],
-  CardFirstDB:[
+  CardFirstDB: [
     "https://www.ucom.am/storage/files/honorx7d-arm.png-650x_-quality(75)-webp(80)-o(png).webp?token=c0fa9d36ff4cddff30fddb48ec6559e1",
     "https://www.ucom.am/storage/files/apple-watch-eshop-mobile-arm.jpg-650x_-quality(75)-webp(80)-o(jpg).webp?token=78d89c0a8131c257c8ad48f33f623538",
     "https://www.ucom.am/storage/files/ucoin-web-650x920-arm-1.png-650x_-quality(75)-webp(80)-o(png).webp?token=d7bd44ce8cd1aa89ccc41824e4fc10a5",
     "https://www.ucom.am/storage/files/airpods-eshop-mobile-arm.jpg-650x_-quality(75)-webp(80)-o(jpg).webp?token=126eee14aae30692c93b574b7f8c5824",
-  ]
+  ],
+  AppIconDB: {
+    1: {
+      name: "Ucom app",
+      title:
+        "Ucom-ի նոր հավելվածը Ձեր կյանքը հեշտացնելու մասին է։ Ավելի շատ խնայված ժամանակ, ավելի քիչ ջանքեր և լիակատար վերահսկողություն Ձեր ծառայությունների նկատմամբ։",
+    },
+    2: {
+      name: "UPlay",
+      title:
+        "Uplay-ը թիվի և մեդիա հարթակ է, որը հասանելի է բոլոր հեռուստացույցներին՝ անկախ մոդելից, ինչպես նաև այլ սարքավորումների համար (պլանշետ, համակարգիչ, սմարթֆոն) և հիանալի լուծում է ֆիլմեր դիտելու ու հավելվածներից օգտվելու համար։",
+    },
+    3: {
+      name: "UPay",
+      title:
+        "Upay-ը հայկական վիրտուալ դրամապանակ է, որն ընձեռում է առցանց վճարումներ և դրամական փոխանցումներ կատարելու հնարավորություն",
+    },
+    4: {
+      name: "uKid",
+      title:
+        "uKid-ը երեխաների հետ մշտապես կապի մեջ լինելու այլընտրանքային տարբերակ է, որի շնորհիվ երեխաները կլինեն ավելի ազատ, ապահով, մշտապես հասանելի, իսկ Դուք՝ ավելի հանգիստ և անհոգ",
+    },
+  },
 };
