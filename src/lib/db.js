@@ -1,4 +1,4 @@
-export default db= {
+export const db= {
   CardSecDB: [
     {
       name: "Level Up+ 3000",
@@ -109,73 +109,56 @@ export default db= {
       id: 1,
       text: "Ներբեռնելով",
       linkText: "Ucom հավելվածը",
-      icon: (
-        <i className="fa-solid fa-mobile-screen-button text-2xl sm:text-3xl text-lime-500 mb-2"></i>
-      ),
+      
+    
     },
     {
       id: 2,
       text: "Օգտվելով կայքի առցանց օգնության ծառայությունից",
       linkText: "",
-      icon: (
-        <i className="fa-regular fa-comment-dots text-2xl sm:text-3xl text-lime-500 mb-2"></i>
-      ),
+      
     },
     {
       id: 3,
       text: "Գրելով մեր",
       linkText: "Facebook կամ Instagram էջերին",
-      icon: (
-        <i className="fa-regular fa-comment-dots text-2xl sm:text-3xl text-lime-500 mb-2"></i>
-      ),
+      
     },
     {
       id: 4,
       text: "Ուղարկելով էլեկտրոնային նամակ՝ 444@ucom.am հասցեին Ucom ծառայությունների պայմանների և սպասարկման վերաբերյալ, ",
       linkText:
         "info@ucom.am հասցեին գլխամասային գրասենյակ ներկայացման ենթակա բոլոր հարցերով",
-      icon: (
-        <i className="fa-regular fa-comment-dots text-2xl sm:text-3xl text-lime-500 mb-2"></i>
-      ),
+      
     },
     {
       id: 5,
       linkText:
         "Զանգահարելով 444՝ Ձեր Ucom բջջային համարից կամ 011 444 444՝ ցանկացած այլ համարից",
-      icon: (
-        <i className="fa-solid fa-headphones text-2xl sm:text-3xl text-lime-500 mb-2"></i>
-      ),
+      
     },
     {
       id: 6,
       text: "Գրելով մեր",
       linkText: "Այցելելով Ucom-ի սպասարկման և վաճառքի ցանկացած կենտրոն",
-      icon: (
-        <i className="fa-solid fa-location-dot text-2xl sm:text-3xl text-lime-500 mb-2"></i>
-      ),
+      
     },
     {
       id: 7,
       text: "Գլխամասային գրասենյակ",
       linkText:
         "<<Յուքոմ>> ՓԲԸ ՀՀ, Երևան 0069,Դավիթ Անհաղթի 8/4 Հեռ.` +374 11 400 400 Ֆաքս` +374 11 400 401 էլ. փոստ` info@ucom.am ",
-      icon: (
-        <i className="fa-solid fa-house text-2xl sm:text-3xl text-lime-500 mb-2"></i>
-      ),
+      
     },
     {
       id: 8,
       linkText: "Անհրաժեշտ փաստաթղթեր",
-      icon: (
-        <i className="fa-solid fa-clipboard-list text-2xl sm:text-3xl text-lime-500 mb-2"></i>
-      ),
+      
     },
     {
       id: 9,
       linkText: "Օգտակար համարներ",
-      icon: (
-        <i className="fa-solid fa-mobile-button text-2xl sm:text-3xl text-lime-500 mb-2"></i>
-      ),
+      
     },
   ],
   InternetInfoDB: [
@@ -237,5 +220,11 @@ export default db= {
         "Նո՞ր եք ժամանել Հայաստան: Ձեր բջջային հեռախոսը միացնելուն պես Դուք անմիջապես կմիանաք Ucom ցանցին:",
       buttonText: "Ավելին",
     },
+  ],
+  CardFirstDB:[
+    "https://www.ucom.am/storage/files/honorx7d-arm.png-650x_-quality(75)-webp(80)-o(png).webp?token=c0fa9d36ff4cddff30fddb48ec6559e1",
+    "https://www.ucom.am/storage/files/apple-watch-eshop-mobile-arm.jpg-650x_-quality(75)-webp(80)-o(jpg).webp?token=78d89c0a8131c257c8ad48f33f623538",
+    "https://www.ucom.am/storage/files/ucoin-web-650x920-arm-1.png-650x_-quality(75)-webp(80)-o(png).webp?token=d7bd44ce8cd1aa89ccc41824e4fc10a5",
+    "https://www.ucom.am/storage/files/airpods-eshop-mobile-arm.jpg-650x_-quality(75)-webp(80)-o(jpg).webp?token=126eee14aae30692c93b574b7f8c5824",
   ]
 };

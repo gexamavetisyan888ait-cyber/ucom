@@ -1,25 +1,5 @@
 import React from "react";
-
-const infoCards = [
-  {
-    title: "Ակտիվացում *121#",
-    description:
-      "Արտերկրում Ձեր Ucom հեռախոսահամարից օգտվելու համար մինչև Հայաստանից մեկնելն ակտիվացրեք ռոումինգ ծառայությունը: Ռոումինգի ակտիվացումն անվճար է:",
-    buttonText: "Ավելին",
-  },
-  {
-    title: "Խորհուրդներ ռոումինգի համար",
-    description:
-      "Ucom ռոումինգի հետ միշտ կապի մեջ եղեք Ձեր ընտանիքի անդամների և ընկերների հետ գործուղման և հանգստի ժամանակ:",
-    buttonText: "Ավելին",
-  },
-  {
-    title: "Այցելուների համար",
-    description:
-      "Նո՞ր եք ժամանել Հայաստան: Ձեր բջջային հեռախոսը միացնելուն պես Դուք անմիջապես կմիանաք Ucom ցանցին:",
-    buttonText: "Ավելին",
-  },
-];
+import {db} from '../../lib/db'
 
 const RoamingInfo = () => {
   return (
@@ -30,7 +10,7 @@ const RoamingInfo = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {infoCards.map((card, index) => (
+          {db.UcomRoumingDB.map((card, index) => (
             <div
               key={index}
               className="flex h-full flex-col justify-between rounded-2xl border border-gray-100 bg-white p-5 sm:p-6 shadow-md transition-transform duration-300 hover:-translate-y-1"

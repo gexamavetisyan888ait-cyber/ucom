@@ -1,28 +1,5 @@
 import React from "react";
-
-const packages = [
-  {
-    name: "uNet 7000",
-    homeSpeed: "150 Մբ/վ",
-    wifi: "Wi-Fi սարք",
-    ftth: "FTTH տեխնոլոգիա",
-    price: "7 000 ֏",
-  },
-  {
-    name: "uNet 9500",
-    homeSpeed: "250 Մբ/վ",
-    wifi: "Super Wi-Fi սարք",
-    ftth: "FTTH տեխնոլոգիա",
-    price: "9 500 ֏",
-  },
-  {
-    name: "uNet 5000 մարքեթինգ",
-    homeSpeed: "100 Մբ/վ",
-    wifi: "Wi-Fi սարք",
-    ftth: "FTTH տեխնոլոգիա",
-    price: "5 000 ֏",
-  },
-];
+import {db} from '../../lib/db'
 
 export default function InternetPackages() {
   return (
@@ -35,7 +12,7 @@ export default function InternetPackages() {
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {packages.map((pkg, i) => (
+        {db.ForHomeDB.map((pkg, i) => (
           <div
             key={i}
             className="
