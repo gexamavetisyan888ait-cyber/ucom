@@ -1,24 +1,38 @@
 import React from "react";
-import {db} from '../../lib/db'
-export default function CardFirst() {
+import { useFirestoreCollection } from "../../hooks/useFirestoreCollection";
 
+export default function CardFirst() {
+  const { data: cards, loading, error } = useFirestoreCollection("CardFirstDB");
+
+  if (loading) {
+    return <div className="mt-12 text-center text-gray-500">Loading cards...</div>;
+  }
+
+  if (error) {
+    return <div className="mt-12 text-center text-red-500">Error: {error}</div>;
+  }
+
+  if (!cards.length) {
+    return <div className="mt-12 text-center text-gray-500">No cards available</div>;
+  }
 
   return (
     <div className="mt-12 grid grid-cols-1 place-items-center gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      {db.CardFirstDB.map((el) => (
-        <img
-          key={el}
-          src={el}
-          alt=""
-          className="
-            h-[320px] w-[220px]
-            sm:h-[360px] sm:w-[250px]
-            lg:h-[400px] lg:w-[275px]
-            rounded-2xl border border-gray-300
-            object-cover transition-opacity duration-300
-            hover:opacity-10
-          "
-        />
+      {cards.map((card, index) => (
+        <div key={card.id || index} className="relative group">
+          <img
+            src={card.imageUrl} 
+            alt={card.title || `Card ${index + 1}`}
+            className="
+              h-[320px] w-[220px]
+              sm:h-[360px] sm:w-[250px]
+              lg:h-[400px] lg:w-[275px]
+              rounded-2xl border border-gray-300
+              object-cover transition-opacity duration-300
+              group-hover:opacity-10
+            "
+          />
+        </div>
       ))}
     </div>
   );
