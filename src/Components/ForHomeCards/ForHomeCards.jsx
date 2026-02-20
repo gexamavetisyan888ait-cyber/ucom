@@ -1,7 +1,13 @@
 import React from "react";
-import {db} from '../../lib/db'
+import { useFirestoreCollection } from "../../hooks/useFirestoreCollection";
 
 export default function InternetPackages() {
+  const { data: packages, loading, error } =
+    useFirestoreCollection("ForHomeDB");
+
+  if (loading) return <p>Բեռնվում է...</p>;
+  if (error) return <p>Սխալ՝ {error}</p>;
+
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-5 py-10 sm:py-12">
       <h2 className="text-2xl sm:text-3xl font-bold mb-2">
@@ -12,14 +18,10 @@ export default function InternetPackages() {
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {db.ForHomeDB.map((pkg, i) => (
+        {packages.map((pkg) => (
           <div
-            key={i}
-            className="
-              flex flex-col justify-between
-              border rounded-2xl overflow-hidden
-              shadow transition hover:shadow-lg
-            "
+            key={pkg.id}
+            className="flex flex-col justify-between border rounded-2xl overflow-hidden shadow transition hover:shadow-lg"
           >
             <div className="bg-lime-500 p-4 text-white font-bold text-base sm:text-lg">
               {pkg.name}
@@ -27,15 +29,12 @@ export default function InternetPackages() {
 
             <div className="p-5 sm:p-6 flex flex-col gap-3 text-sm sm:text-base">
               <p className="flex items-center gap-2 text-gray-700">
-                <i className="fa-solid fa-house text-lime-500"></i>
                 {pkg.homeSpeed} տան ինտերնետ
               </p>
               <p className="flex items-center gap-2 text-gray-700">
-                <i className="fa-solid fa-wifi text-lime-500"></i>
                 {pkg.wifi}
               </p>
               <p className="flex items-center gap-2 text-gray-700">
-                <i className="fa-solid fa-globe text-lime-500"></i>
                 {pkg.ftth}
               </p>
             </div>

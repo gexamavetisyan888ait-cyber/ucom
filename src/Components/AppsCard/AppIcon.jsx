@@ -1,7 +1,11 @@
+// src/App.jsx
 import React, { useState } from "react";
-import { db } from "../../lib/db";
+import { useFirestoreCollection } from "./hooks/useFirestoreCollection";
 
 export default function App() {
+  const { data: appsData, loading } = useFirestoreCollection("AppIconDB");
+  const [cardId, setCardId] = useState(null);
+
   const apps = [
     "https://www.ucom.am/storage/files/new-upay.svg",
     "https://www.ucom.am/storage/files/285x285-80x_-quality(75)-webp(80).png?token=e9422f77bed178a5f2d362e18a028fb1",
@@ -9,21 +13,27 @@ export default function App() {
     "https://www.ucom.am/storage/files/ukid_1.svg",
   ];
 
-  const [cardId, setCardId] = useState(null);
+  if (loading) {
+    return <div className="p-10 text-center">Loading...</div>;
+  }
 
   return (
     <div className="flex flex-col items-center gap-6 p-4 md:flex-row md:items-start md:justify-center md:p-10">
+      
+      {/* Recharge Card */}
       <div className="w-full max-w-[420px] rounded-2xl bg-white p-6 shadow-lg">
-        <h2 className="mb-2 text-lg font-bold">Recharge your account online</h2>
+        <h2 className="mb-2 text-lg font-bold">
+          Recharge your account online
+        </h2>
         <p className="mb-5 text-sm text-gray-500">
           Enter your Ucom mobile or fixed service number.
         </p>
 
         <div className="mb-4 flex gap-5">
-          <span className="cursor-pointer border-b-2 border-transparent pb-1 text-gray-400">
+          <span className="border-b-2 border-transparent pb-1 text-gray-400">
             Phone number
           </span>
-          <span className="cursor-pointer border-b-2 border-green-500 pb-1 text-green-500">
+          <span className="border-b-2 border-green-500 pb-1 text-green-500">
             ID
           </span>
         </div>
@@ -49,97 +59,92 @@ export default function App() {
         </div>
       </div>
 
+      {/* Apps Card */}
       <div className="w-full max-w-[420px] rounded-2xl bg-white p-6 shadow-lg">
         <h2 className="mb-2 text-lg font-bold">Ucom apps</h2>
         <p className="mb-5 text-sm text-gray-500">
-          Discover a new level of comfort through our innovative mobile
-          applications.
+          Discover a new level of comfort through our innovative mobile applications.
         </p>
 
         <div className="mt-5 grid grid-cols-2 gap-6 sm:grid-cols-4 md:grid-cols-2">
-          {apps.map((app, index) => (
+          {appsData.map((app, index) => (
             <div
-              onClick={() => {
-                setCardId(index + 1);
-              }}
-              key={app}
-              className="text-center"
+              key={app.id}
+              onClick={() => setCardId(index)}
+              className="cursor-pointer text-center"
             >
               <img
-                src={app}
-                className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-lg bg-green-500 font-bold text-white"
+                src={apps[index]}
+                alt={app.name}
+                className="mx-auto mb-2 h-14 w-14 rounded-lg object-contain"
               />
             </div>
           ))}
         </div>
       </div>
 
-      {cardId && (
+      {/* Modal */}
+      {cardId !== null && appsData[cardId] && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          
           <div
             className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"
             onClick={() => setCardId(null)}
           />
 
-          <div className="relative w-full max-w-[600px] rounded-[32px] bg-white p-8 shadow-2xl animate-in fade-in zoom-in-95 duration-300">
+          <div className="relative w-full max-w-[600px] rounded-[32px] bg-white p-8 shadow-2xl">
+            
             <button
               onClick={() => setCardId(null)}
-              className="absolute right-6 top-6 text-gray-400 hover:text-gray-600 transition-colors"
+              className="absolute right-6 top-6 text-gray-400 hover:text-gray-600"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
+              ✕
             </button>
 
             <div className="flex gap-6 items-start mb-10">
-              <div className="w-24 h-24 flex-shrink-0 rounded-3xl">
+              <div className="w-24 h-24 flex-shrink-0">
                 <img
-                  src={apps[cardId - 1]}
-                  alt={db.AppIconDB[cardId].name}
+                  src={apps[cardId]}
+                  alt={appsData[cardId]?.name}
                   className="w-full h-full object-contain"
                 />
               </div>
+
               <div className="flex-1">
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                  {db.AppIconDB[cardId].name}
+                  {appsData[cardId]?.name}
                 </h2>
-                <p className="text-sm leading-relaxed text-gray-500">
-                  {db.AppIconDB[cardId].title}
+                <p className="text-sm text-gray-500">
+                  {appsData[cardId]?.title}
                 </p>
               </div>
             </div>
 
             <hr className="border-gray-100 mb-8" />
 
-            <div className="flex flex-col md:flex-row items-center gap-8 px-4">
-              <div className="w-32 h-32 bg-gray-100 rounded-lg flex items-center justify-center border border-gray-200">
-                <img src="https://www.ucom.am/storage/files/ukid-qr.png-148x_-quality(75)-webp(80)-o(png).webp?token=d526bfef72778344bed1fccef9eaa615"/>
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="w-32 h-32 bg-gray-100 rounded-lg flex items-center justify-center border">
+                <img
+                  src="https://www.ucom.am/storage/files/ukid-qr.png-148x_-quality(75)-webp(80)-o(png).webp?token=d526bfef72778344bed1fccef9eaa615"
+                  alt="QR"
+                />
               </div>
 
               <div className="flex-1 text-center md:text-left">
                 <p className="font-bold text-gray-800 mb-4">
                   Ներբեռնեք Ձեր սարքի համար
                 </p>
+
                 <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                  <a href="#" className="transition-transform active:scale-95">
+                  <a href="#">
                     <img
                       src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                       alt="Google Play"
                       className="h-12"
                     />
                   </a>
-                  <a href="#" className="transition-transform active:scale-95">
+
+                  <a href="#">
                     <img
                       src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
                       alt="App Store"
@@ -149,6 +154,7 @@ export default function App() {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       )}
