@@ -1,13 +1,27 @@
 import React from "react";
-import {db} from '../../lib/db'
-
+import { useFirestoreCollection } from "../../hooks/useFirestoreCollection";
 
 export default function InfoCards() {
+  // Fetch the "InternetInfoDB" collection from Firestore
+  const { data: cards, loading, error } = useFirestoreCollection("InternetInfoDB");
+
+  if (loading) {
+    return <div className="text-center py-10 text-gray-500">Loading info cards...</div>;
+  }
+
+  if (error) {
+    return <div className="text-center py-10 text-red-500">Error: {error}</div>;
+  }
+
+  if (!cards.length) {
+    return <div className="text-center py-10 text-gray-500">No info cards available</div>;
+  }
+
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-      {db.InternetInfoDB.map((card, i) => (
+      {cards.map((card, i) => (
         <div
-          key={i}
+          key={card.id || i}
           className="bg-white rounded-2xl shadow-md p-4 sm:p-6 md:p-8 flex flex-col md:flex-row items-center gap-4 sm:gap-6 md:gap-8"
         >
           <div className="flex-1 text-center md:text-left">
