@@ -1,14 +1,25 @@
-
+import React from "react";
 import Card from "./Card";
-import {db} from '../../lib/db.js'
+import { useFirestoreCollection } from "../../hooks/useFirestoreCollection";
 
 export default function CardSec() {
- 
+  const { data: cards, loading, error } = useFirestoreCollection("CardSecDB");
+
+  if (loading) {
+    return <div className="mt-12 text-center text-gray-500">Loading cards...</div>;
+  }
+
+  if (error) {
+    return <div className="mt-12 text-center text-red-500">Error: {error}</div>;
+  }
+
+  if (!cards.length) {
+    return <div className="mt-12 text-center text-gray-500">No cards available</div>;
+  }
+
   return (
     <div className="w-full mx-auto mt-12 px-5">
-      <h1 className="text-2xl font-bold mb-8 text-center">
-        Լավագույն առաջարկ
-      </h1>
+      <h1 className="text-2xl font-bold mb-8 text-center">Լավագույն առաջարկ</h1>
 
       <div
         className="
@@ -19,8 +30,86 @@ export default function CardSec() {
           mb-10
         "
       >
-        {db.CardSecDB.map((el, i) => (
-          <Card key={i} {...el} />
+        {cards.map((el, i) => (
+          <Card key={el.id || i} {...el} />
+        ))}
+      </div>
+    </div>
+  );
+}import React from "react";
+import Card from "./Card";
+import { useFirestoreCollection } from "../../hooks/useFirestoreCollection";
+
+export default function CardSec() {
+  // Fetch "CardSecDB" collection from Firestore
+  const { data: cards, loading, error } = useFirestoreCollection("CardSecDB");
+
+  if (loading) {
+    return <div className="mt-12 text-center text-gray-500">Loading cards...</div>;
+  }
+
+  if (error) {
+    return <div className="mt-12 text-center text-red-500">Error: {error}</div>;
+  }
+
+  if (!cards.length) {
+    return <div className="mt-12 text-center text-gray-500">No cards available</div>;
+  }
+
+  return (
+    <div className="w-full mx-auto mt-12 px-5">
+      <h1 className="text-2xl font-bold mb-8 text-center">Լավագույն առաջարկ</h1>
+
+      <div
+        className="
+          grid gap-[70px] justify-items-center
+          grid-cols-1
+          sm:grid-cols-2
+          lg:grid-cols-4
+          mb-10
+        "
+      >
+        {cards.map((el, i) => (
+          <Card key={el.id || i} {...el} />
+        ))}
+      </div>
+    </div>
+  );
+}import React from "react";
+import Card from "./Card";
+import { useFirestoreCollection } from "../../hooks/useFirestoreCollection";
+
+export default function CardSec() {
+  // Fetch "CardSecDB" collection from Firestore
+  const { data: cards, loading, error } = useFirestoreCollection("CardSecDB");
+
+  if (loading) {
+    return <div className="mt-12 text-center text-gray-500">Loading cards...</div>;
+  }
+
+  if (error) {
+    return <div className="mt-12 text-center text-red-500">Error: {error}</div>;
+  }
+
+  if (!cards.length) {
+    return <div className="mt-12 text-center text-gray-500">No cards available</div>;
+  }
+
+  return (
+    <div className="w-full mx-auto mt-12 px-5">
+      <h1 className="text-2xl font-bold mb-8 text-center">Լավագույն առաջարկ</h1>
+
+      <div
+        className="
+          grid gap-[70px] justify-items-center
+          grid-cols-1
+          sm:grid-cols-2
+          lg:grid-cols-4
+          mb-10
+        "
+      >
+        {cards.map((el, i) => (
+          <Card key={el.id || i} {...el} />
         ))}
       </div>
     </div>
