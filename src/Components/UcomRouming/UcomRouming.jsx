@@ -1,7 +1,22 @@
 import React from "react";
-import {db} from '../../lib/db'
+import { useFirestoreCollection } from "../../hooks/useFirestoreCollection";
 
 const RoamingInfo = () => {
+  // Fetch the "UcomRoumingDB" collection from Firestore
+  const { data: cards, loading, error } = useFirestoreCollection("UcomRoumingDB");
+
+  if (loading) {
+    return <div className="text-center py-10 text-gray-500">Loading roaming info...</div>;
+  }
+
+  if (error) {
+    return <div className="text-center py-10 text-red-500">Error: {error}</div>;
+  }
+
+  if (!cards.length) {
+    return <div className="text-center py-10 text-gray-500">No roaming info available</div>;
+  }
+
   return (
     <section className="px-4 py-10 sm:py-14">
       <div className="mx-auto max-w-[1100px]">
@@ -10,9 +25,9 @@ const RoamingInfo = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {db.UcomRoumingDB.map((card, index) => (
+          {cards.map((card, index) => (
             <div
-              key={index}
+              key={card.id || index}
               className="flex h-full flex-col justify-between rounded-2xl border border-gray-100 bg-white p-5 sm:p-6 shadow-md transition-transform duration-300 hover:-translate-y-1"
             >
               <div>
