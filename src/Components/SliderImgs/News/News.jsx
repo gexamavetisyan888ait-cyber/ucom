@@ -1,9 +1,9 @@
 import React from "react";
 import NewsCard from "./NewsCard";
-import { useFirestoreCollection } from "../../../hooks/useFirestoreCollection";
+import { useRealtimeCollection } from "../../../hooks/useRealtimeCollection";
 
 const NewsSection = () => {
-  const { data: news, loading, error } = useFirestoreCollection("NewsDB");
+  const { data: news, loading, error } = useRealtimeCollection("db/NewsDB");
 
   if (loading) {
     return <div className="text-center py-10 text-gray-500">Loading news...</div>;

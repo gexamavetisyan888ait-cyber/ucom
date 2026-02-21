@@ -1,9 +1,8 @@
 import React from "react";
-import { useFirestoreCollection } from "../../hooks/useFirestoreCollection";
+import { useRealtimeCollection } from "../../hooks/useRealtimeCollection";
 
 const RoamingInfo = () => {
-  // Fetch the "UcomRoumingDB" collection from Firestore
-  const { data: cards, loading, error } = useFirestoreCollection("UcomRoumingDB");
+  const { data: cards, loading, error } = useRealtimeCollection("db/UcomRoumingDB");
 
   if (loading) {
     return <div className="text-center py-10 text-gray-500">Loading roaming info...</div>;

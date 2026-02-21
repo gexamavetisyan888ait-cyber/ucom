@@ -1,8 +1,8 @@
 import React from "react";
-import { useFirestoreCollection } from "../../hooks/useFirestoreCollection";
+import { useRealtimeCollection } from "../../hooks/useRealtimeCollection";
 
 export default function CardFirst() {
-  const { data: cards, loading, error } = useFirestoreCollection("CardFirstDB");
+  const { data: cards, loading, error } = useRealtimeCollection("db/CardFirstDB");
 
   if (loading) {
     return <div className="mt-12 text-center text-gray-500">Loading cards...</div>;

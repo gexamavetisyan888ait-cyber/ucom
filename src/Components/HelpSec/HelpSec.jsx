@@ -1,8 +1,8 @@
 import React from "react";
-import { useFirestoreCollection } from "../../hooks/useFirestoreCollection";
+import { useRealtimeCollection } from "../../hooks/useRealtimeCollection";
 
 const ContactCards = () => {
-  const { data: cards, loading, error } = useFirestoreCollection("HelpSecDB");
+  const { data: cards, loading, error } = useRealtimeCollection("db/HelpSecDB");
 
   if (loading) {
     return <div className="text-center py-10 text-gray-500">Loading contacts...</div>;

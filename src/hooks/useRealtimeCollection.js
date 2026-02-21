@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
+import { ref, get } from "firebase/database";
 import { db } from "../lib/firrebase";
 
-export const useFirestoreCollection = (collectionName) => {
+export const useRealtimeCollection = (path) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -10,14 +10,20 @@ export const useFirestoreCollection = (collectionName) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const snapshot = await getDocs(collection(db, collectionName));
+        const snapshot = await get(ref(db, path));
 
-        const result = snapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
+        if (snapshot.exists()) {
+          const val = snapshot.val();
 
-        setData(result);
+          const result = Object.keys(val).map((key) => ({
+            id: key,
+            ...val[key],
+          }));
+
+          setData(result);
+        } else {
+          setData([]);
+        }
       } catch (err) {
         setError(err.message);
       } finally {
@@ -26,7 +32,7 @@ export const useFirestoreCollection = (collectionName) => {
     };
 
     fetchData();
-  }, [collectionName]);
+  }, [path]);
 
   return { data, loading, error };
 };

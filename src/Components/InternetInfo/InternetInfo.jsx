@@ -1,9 +1,8 @@
 import React from "react";
-import { useFirestoreCollection } from "../../hooks/useFirestoreCollection";
+import { useRealtimeCollection } from "../../hooks/useRealtimeCollection";
 
 export default function InfoCards() {
-  // Fetch the "InternetInfoDB" collection from Firestore
-  const { data: cards, loading, error } = useFirestoreCollection("InternetInfoDB");
+  const { data: cards, loading, error } = useRealtimeCollection("db/InternetInfoDB");
 
   if (loading) {
     return <div className="text-center py-10 text-gray-500">Loading info cards...</div>;

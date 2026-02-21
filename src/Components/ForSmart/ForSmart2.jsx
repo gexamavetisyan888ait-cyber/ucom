@@ -1,9 +1,9 @@
 import React from "react";
 import PackageCard from "./ForSmart";
-import { useFirestoreCollection } from "../../hooks/useFirestoreCollection";
+import { useRealtimeCollection } from "../../hooks/useRealtimeCollection";
 
 const Packages = () => {
-  const { data: packages, loading, error } = useFirestoreCollection("ForSmartDB");
+  const { data: packages, loading, error } = useRealtimeCollection("db/ForSmartDB");
 
   if (loading) {
     return <div className="text-center py-10 text-gray-500">Loading packages...</div>;

@@ -1,9 +1,9 @@
 import React from "react";
-import { useFirestoreCollection } from "../../hooks/useFirestoreCollection";
+import { useRealtimeCollection } from "../../hooks/useRealtimeCollection";
 
 export default function InternetPackages() {
   const { data: packages, loading, error } =
-    useFirestoreCollection("ForHomeDB");
+    useRealtimeCollection("db/ForHomeDB");
 
   if (loading) return <p>Բեռնվում է...</p>;
   if (error) return <p>Սխալ՝ {error}</p>;

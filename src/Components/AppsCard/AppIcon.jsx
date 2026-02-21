@@ -1,9 +1,8 @@
-// src/App.jsx
 import React, { useState } from "react";
-import { useFirestoreCollection } from "./hooks/useFirestoreCollection";
+import { useRealtimeCollection } from "../../hooks/useRealtimeCollection";
 
 export default function App() {
-  const { data: appsData, loading } = useFirestoreCollection("AppIconDB");
+  const { data: appsData, loading } = useRealtimeCollection("db/CardSecDB");
   const [cardId, setCardId] = useState(null);
 
   const apps = [
