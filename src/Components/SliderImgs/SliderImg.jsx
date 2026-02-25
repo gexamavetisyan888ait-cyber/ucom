@@ -6,10 +6,12 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const images = [
-  "https://www.ucom.am/storage/files/unity-eternia-2400x1000-arm-07.jpg-2720x_-quality(75)-webp(80)-o(jpg).webp?token=3a85f32a4e28ff3de3b78a1e1617bbf3",
-  "https://www.ucom.am/storage/files/5g-sc-2-web-2.jpg-2720x_-quality(75)-webp(80)-o(jpg).webp?token=a648c506519f8f3c453ac0cc55f77c1f",
+  "https://www.ucom.am/storage/files/web-2720x1080-armjpg.jpg-2720x_-quality(75)-webp(80)-o(jpg).webp?token=cf0ff1a230a870d6daafad6d82872d2c",
+  "https://www.ucom.am/storage/files/utravel-new-web-arm.jpg-2720x_-quality(75)-webp(80)-o(jpg).webp?token=5ac09575f4814b29b232a6d6e5a74fe5",
   "https://www.ucom.am/storage/files/iphone-2720x1080-arm-2.jpg-2720x_-quality(75)-webp(80)-o(jpg).webp?token=66d23aa67a1b1d31a5d094ef879e13c",
   "https://www.ucom.am/storage/files/smartphone-2720x1080-arm-1.jpg-2720x_-quality(75)-webp(80)-o(jpg).webp?token=90dd92f2aba8f90f109be1e55bd9a561",
+  "https://www.ucom.am/storage/files/playstation-5-web-armjpg-1.jpg-2720x_-quality(75)-webp(80)-o(jpg).webp?token=8e2c14343c90e66f60d071d31f4d730f",
+  "https://www.ucom.am/storage/files/nicenumber-levelup-2720x1080-am.png-2720x_-quality(75)-webp(80)-o(png).webp?token=9e4670738b9f9316160041e14e0cd86b",
 ];
 
 export default function ImageSlider() {

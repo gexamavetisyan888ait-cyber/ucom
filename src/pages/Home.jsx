@@ -2,7 +2,7 @@ import React from "react";
 
 import Header from "../Components/Header/Header";
 import SlderImgs from "../Components/SliderImgs/SliderImg";
-import CardFirst from "../Components/cardFirst/CardFirst";
+// import CardFirst from "../Components/cardFirst/CardFirst";
 import CardSec from "../Components/CardSec/CardSec";
 import Subscribtion from "../Components/Subscribtion/Subscribtion";
 import MobileIdCard from "../Components/MobileIdCard/MobileIdCard";
@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <Header />
       <SlderImgs />
-      <CardFirst />
+      {/* <CardFirst /> */}
       <CardSec />
       <Subscribtion />
       <MobileIdCard />
