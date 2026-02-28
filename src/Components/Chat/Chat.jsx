@@ -41,6 +41,7 @@ export default function ChatUI() {
         setMessage("");
     };
 
+    
     const clearChat = async () => {
         await remove(ref(db, "db/Chat"));
     };
