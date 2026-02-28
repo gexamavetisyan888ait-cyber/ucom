@@ -33,6 +33,6 @@ export const useRealtimeCollection = (path) => {
 
     fetchData();
   }, [path]);
-
+    
   return { data, loading, error };
 };

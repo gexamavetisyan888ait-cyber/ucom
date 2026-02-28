@@ -18,9 +18,9 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-3 sm:gap-5 text-xs sm:text-sm">
-          <span className="font-medium">
+          <a className="font-medium" href="/chat">
             <i className="fa-solid fa-phone mr-1"></i> 444 | 011 444 444
-          </span>
+          </a>
 
           <a href="/help" className="text-black flex items-center gap-1">
             <i className="fa-solid fa-question"></i> Օգնություն

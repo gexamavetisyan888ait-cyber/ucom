@@ -19,7 +19,7 @@ export default function App() {
   return (
     <div className="flex flex-col items-center gap-6 p-4 md:flex-row md:items-start md:justify-center md:p-10">
       
-      {/* Recharge Card */}
+    
       <div className="w-full max-w-[420px] rounded-2xl bg-white p-6 shadow-lg">
         <h2 className="mb-2 text-lg font-bold">
           Recharge your account online
@@ -58,7 +58,6 @@ export default function App() {
         </div>
       </div>
 
-      {/* Apps Card */}
       <div className="w-full max-w-[420px] rounded-2xl bg-white p-6 shadow-lg">
         <h2 className="mb-2 text-lg font-bold">Ucom apps</h2>
         <p className="mb-5 text-sm text-gray-500">
@@ -82,7 +81,6 @@ export default function App() {
         </div>
       </div>
 
-      {/* Modal */}
       {cardId !== null && appsData[cardId] && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           

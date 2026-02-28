@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Rouming from "./pages/Rouming";
 import Help from "./pages/Help";
 import MobileConectionn from './pages/MobileConectionn'
+import Chat from './pages/Chat'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/forHome" element={<ForHome />} />
         <Route path="/help" element={<Help />} />
         <Route path="/mobileconection" element={<MobileConectionn />} />
+          <Route path="/chat" element={<Chat />} />
       </Routes>
     </BrowserRouter>
   );
