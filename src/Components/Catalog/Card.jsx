@@ -1,3 +1,4 @@
+
 export default function InfoCard({ title, subtitle, image, imagePosition }) {
   const isRight = imagePosition === "right";
 
